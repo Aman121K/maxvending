@@ -37,7 +37,13 @@ export function Counter({ n, suffix }) {
   return <b ref={ref}>{v}{suffix}</b>
 }
 
+export const SITE_TITLE = 'Max Vending – Tea & Coffee Vending Machines'
+
 export function PageHero({ eyebrow, title, children, crumbs = [] }) {
+  useEffect(() => {
+    document.title = `${title} | Max Vending`
+    return () => { document.title = SITE_TITLE }
+  }, [title])
   return (
     <header className="page-hero">
       <div className="container">

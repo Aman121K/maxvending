@@ -3,7 +3,7 @@ import { ArrowRight, Award, Wrench, Truck, Users } from 'lucide-react'
 import { PageHero, Reveal, Counter } from '../components/ui'
 import Clients from '../components/Clients'
 import CtaBand from '../components/CtaBand'
-import { STATS, FEATURES } from '../data'
+import { STATS } from '../data'
 
 const VALUES = [
   { i: <Award />, t: 'Quality first', d: 'State-of-the-art infrastructure that lets us balance build quality and cost.' },

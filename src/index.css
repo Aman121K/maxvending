@@ -66,7 +66,7 @@ section { padding: 100px 0; position: relative; }
 .links a:hover { background: rgba(255, 255, 255, .12); }
 .menu-btn { display: none; color: #fff; }
 .mobile-menu { position: fixed; inset: 0; background: var(--espresso); z-index: 95; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
-.mobile-menu a { font-family: 'Fraunces', serif; font-size: 2rem; color: #fff; }
+.mm-links a { font-family: 'Fraunces', serif; color: #fff; display: block; }
 .mobile-close { position: absolute; top: 22px; right: 22px; color: #fff; }
 
 /* hero */
@@ -205,7 +205,6 @@ footer { background: var(--espresso); color: #c9b098; padding: 50px 0 30px; }
 .links a.active { background: rgba(255, 255, 255, .14); }
 .dd { position: relative; }
 .dd-menu { position: absolute; top: 100%; left: 0; min-width: 240px; background: var(--espresso); border: 1px solid rgba(255, 255, 255, .12); border-radius: 16px; padding: 8px; display: grid; box-shadow: 0 20px 40px rgba(0, 0, 0, .4); }
-.mobile-menu a { display: block; text-align: center; }
 .page-hero { padding: 150px 0 80px; background: radial-gradient(900px 400px at 80% 0%, #4a2616 0%, transparent 60%), linear-gradient(160deg, var(--espresso), var(--roast)); color: #fff; }
 .page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; max-width: 760px; }
 .page-hero p { color: #d9c4ae; margin-top: 16px; max-width: 600px; font-size: 1.08rem; }
@@ -363,3 +362,20 @@ section { padding: var(--section-y) 0; }
   .stats { gap: 12px; margin-top: 44px; }
 }
 @media (hover: none) { .card:hover .pic img, .gal-item:hover img { transform: none; } }
+
+/* small-phone hardening */
+.hero-grid > *, .about-grid > *, .enq-grid > *, .detail-grid > * { min-width: 0; }
+@media (max-width: 900px) {
+  .hero-grid, .about-grid, .enq-grid, .detail-grid, .promo, .feat-grid, .modal { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .card .tag { font-size: .7rem; letter-spacing: .08em; }
+}
+@media (max-width: 380px) {
+  .hero-cta { grid-template-columns: 1fr; }
+  .btn { padding: 13px 20px; }
+  .logo-txt { font-size: .64rem; letter-spacing: .12em; }
+  .max-mark { width: 62px; height: auto; }
+  .title { font-size: 1.8rem; }
+  .card h3 { font-size: 1.05rem; }
+}

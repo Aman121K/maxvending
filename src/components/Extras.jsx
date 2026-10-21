@@ -33,8 +33,8 @@ export function Process() {
 }
 
 const PLACES = [
-  [<Briefcase />, 'Offices'], [<Factory />, 'Factories'], [<Hospital />, 'Hospitals'],
-  [<GraduationCap />, 'Schools & colleges'], [<Store />, 'Showrooms & shops'], [<Building2 />, 'Banks & institutions'],
+  [Briefcase, 'Offices'], [Factory, 'Factories'], [Hospital, 'Hospitals'],
+  [GraduationCap, 'Schools & colleges'], [Store, 'Showrooms & shops'], [Building2, 'Banks & institutions'],
 ]
 
 export function Industries() {
@@ -46,9 +46,9 @@ export function Industries() {
           <h2 className="title">Perfect for every workplace</h2>
         </Reveal>
         <div className="chips">
-          {PLACES.map(([ic, t], k) => (
+          {PLACES.map(([Ic, t], k) => (
             <Reveal key={t} i={k} className="place">
-              <span>{ic}</span>{t}
+              <span><Ic /></span>{t}
             </Reveal>
           ))}
         </div>
