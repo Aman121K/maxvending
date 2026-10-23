@@ -33,7 +33,7 @@ export default function About() {
           <div className="stats">{STATS.map((s, i) => <Reveal key={s.label} i={i} className="stat"><Counter n={s.n} suffix={s.suffix} /><span>{s.label}</span></Reveal>)}</div>
         </div>
       </section>
-      <section className="products">
+      <section className="soft">
         <div className="container">
           <Reveal className="center"><span className="eyebrow">What we stand for</span><h2 className="title">Our values</h2></Reveal>
           <div className="contact-grid">

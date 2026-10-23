@@ -27,9 +27,8 @@ export const FEATURES = [
 
 export const STATS = [
   { n: 30, suffix: '+', label: 'Years of experience' },
-  { n: 40, suffix: '+', label: 'Happy clients' },
-  { n: 5, suffix: '', label: 'Machine models' },
-  { n: 100, suffix: '%', label: 'Made in Delhi' },
+  { n: 5, suffix: '', label: 'Premix machine models' },
+  { n: 40, suffix: '+', label: 'Clients served' },
 ]
 
 export const CLIENTS = Array.from({ length: 44 }, (_, i) => i + 1).filter((n) => n !== 4)

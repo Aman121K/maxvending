@@ -3,8 +3,8 @@ import { useLocation } from 'react-router-dom'
 import { motion, useScroll, useSpring, useInView, animate } from 'framer-motion'
 
 export const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] } }),
+  hidden: { opacity: 0, y: 16 },
+  show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay: i * 0.06, ease: 'easeOut' } }),
 }
 
 export const Reveal = ({ children, i = 0, className, ...p }) => (
@@ -47,9 +47,9 @@ export function PageHero({ eyebrow, title, children, crumbs = [] }) {
   return (
     <header className="page-hero">
       <div className="container">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
           <div className="crumbs">{crumbs.map((c, i) => <span key={i}>{c}</span>)}</div>
-          <span className="eyebrow" style={{ color: '#ffb35c' }}>{eyebrow}</span>
+          <span className="eyebrow">{eyebrow}</span>
           <h1>{title}</h1>
           {children && <p>{children}</p>}
         </motion.div>

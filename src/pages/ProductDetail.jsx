@@ -1,5 +1,4 @@
 import { Link, useParams, Navigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { Phone, Check, ArrowLeft } from 'lucide-react'
 import { PageHero, Reveal } from '../components/ui'
 import ProductCard from '../components/ProductCard'
@@ -17,9 +16,7 @@ export default function ProductDetail() {
       <PageHero eyebrow={p.tag} title={`${p.name} Vending Machine`} crumbs={['Home', '/', 'Products', '/', p.name]}>{p.desc}</PageHero>
       <section>
         <div className="container detail-grid">
-          <motion.div className="detail-pic" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7 }}>
-            <motion.img src={p.img} alt={p.name} animate={{ y: [0, -10, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }} />
-          </motion.div>
+          <div className="detail-pic"><img src={p.img} alt={`${p.name} ${p.tag}`} /></div>
           <Reveal>
             <Link to="/products" className="back"><ArrowLeft size={16} /> All products</Link>
             <h2 className="title" style={{ marginTop: 12 }}>{p.name} <span style={{ color: 'var(--red)' }}>{p.tag}</span></h2>
@@ -30,7 +27,7 @@ export default function ProductDetail() {
             </ul>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 26 }}>
               <a href="#quote" className="btn btn-red">Get a Quote</a>
-              <a href={`tel:${PHONE}`} className="btn btn-dark"><Phone size={16} /> Call Now</a>
+              <a href={`tel:${PHONE}`} className="btn btn-outline"><Phone size={16} /> Call</a>
             </div>
           </Reveal>
         </div>
@@ -41,7 +38,7 @@ export default function ProductDetail() {
           <Reveal i={2}><EnquiryForm key={slug} product={`${p.name} ${p.tag}`} /></Reveal>
         </div>
       </section>
-      <section className="products">
+      <section className="soft">
         <div className="container">
           <Reveal className="center"><h2 className="title">Other machines</h2></Reveal>
           <div className="grid">{others.map((o, i) => <ProductCard key={o.slug} p={o} i={i} />)}</div>

@@ -13,8 +13,8 @@ export default function Enquiry() {
             <span className="eyebrow">Get in touch</span>
             <h2 className="title">Let's find the right machine for you.</h2>
             <div style={{ marginTop: 28, display: 'grid', gap: 14 }}>
-              <a href={`tel:${PHONE}`} style={{ display: 'flex', gap: 12, alignItems: 'center', fontWeight: 600 }}><Phone size={20} color="#d8232a" /> {PHONE_LABEL}</a>
-              <a href={`mailto:${EMAIL}`} style={{ display: 'flex', gap: 12, alignItems: 'center', fontWeight: 600 }}><Mail size={20} color="#d8232a" /> {EMAIL}</a>
+              <a href={`tel:${PHONE}`} className="contact-line"><Phone size={20} /> {PHONE_LABEL}</a>
+              <a href={`mailto:${EMAIL}`} className="contact-line"><Mail size={20} /> {EMAIL}</a>
             </div>
           </Reveal>
           <Reveal i={2}><EnquiryForm /></Reveal>

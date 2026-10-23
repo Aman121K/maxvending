@@ -15,7 +15,7 @@ export default function Gallery() {
   return (
     <>
       <PageHero eyebrow="Gallery" title="Our machines in focus" crumbs={['Home', '/', 'Gallery']}>Tap any photo to view it larger.</PageHero>
-      <section className="products">
+      <section className="soft">
         <div className="container">
           <div className="gal">
             {PRODUCTS.map((p, i) => (
