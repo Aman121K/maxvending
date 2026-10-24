@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import WhatsAppIcon from './WhatsAppIcon'
-import { PRODUCTS, PHONE } from '../data'
+import { PRODUCTS, BEAN_MACHINES, PHONE } from '../data'
 
 const label = (p) => `${p.name} ${p.tag}`
 
@@ -23,6 +23,7 @@ export default function EnquiryForm({ product }) {
       <label>Machine
         <select value={f.product} onChange={set('product')}>
           {PRODUCTS.map((p) => <option key={p.slug}>{label(p)}</option>)}
+          {BEAN_MACHINES.map((p) => <option key={p.slug}>{label(p)}</option>)}
           <option>Bean to Cup Machine</option><option>Hand Sanitizer</option>
         </select>
       </label>

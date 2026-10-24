@@ -18,12 +18,12 @@ export default function Home() {
           <Reveal>
             <span className="eyebrow">About us</span>
             <h2 className="title">Quality and cost, in balance.</h2>
-            <p>Max Vending is a Delhi-based company that designs and manufactures coffee vending machines. Our state-of-the-art infrastructure lets us balance quality and cost.</p>
+            <p>Max Vending designs and manufactures coffee vending machines in India. Our state-of-the-art infrastructure lets us balance quality and cost.</p>
             <p>Customer satisfaction has been our main achievement since inception.</p>
             <Link to="/about" className="btn btn-outline" style={{ marginTop: 24 }}>More about Max Vending</Link>
           </Reveal>
           <Reveal i={1}>
-            <div className="about-visual"><div className="main"><img src="/img/gallery/1.jpg" alt="Max 4 lane vending machine" /></div></div>
+            <div className="about-visual"><div className="main"><img src="/img/products/4-lane.png" alt="Max 4 lane vending machine" /></div></div>
           </Reveal>
         </div>
       </section>

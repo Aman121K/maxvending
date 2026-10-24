@@ -25,6 +25,7 @@ function AnimatedRoutes() {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:slug" element={<ProductDetail />} />
           <Route path="/bean-to-cup" element={<BeanToCup />} />
+          <Route path="/bean-to-cup/:slug" element={<ProductDetail category="bean" />} />
           <Route path="/hand-sanitizer" element={<Sanitizer />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/enquiry" element={<Enquiry />} />

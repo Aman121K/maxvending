@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="container">
           <div className="foot-grid">
             <div>
-              <Logo size={54} />
-              <p style={{ marginTop: 14, maxWidth: 280 }}>Delhi-based designers and manufacturers of tea & coffee vending machines.</p>
+              <Logo height={56} />
+              <p style={{ marginTop: 14, maxWidth: 280 }}>Designers and manufacturers of tea & coffee vending machines. Made in India.</p>
             </div>
             <div><h4>Quick links</h4>{NAV.map(([l, h]) => <Link key={h} to={h}>{l}</Link>)}</div>
             <div><h4>Our products</h4>{PRODUCTS.map((p) => <Link key={p.slug} to={`/products/${p.slug}`}>{p.name} · {p.tag}</Link>)}</div>
@@ -23,7 +23,7 @@ export default function Footer() {
               <p>{ADDRESS}</p>
             </div>
           </div>
-          <p className="copy">© {new Date().getFullYear()} Max Vending. All rights reserved.</p>
+          <p className="copy">© {new Date().getFullYear()} Max Vending Pvt. Ltd. All rights reserved.</p>
         </div>
       </footer>
       <div className="fab">

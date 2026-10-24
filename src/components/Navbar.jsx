@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X, ChevronDown } from 'lucide-react'
-import { NAV, PRODUCTS, PHONE } from '../data'
+import { NAV, PRODUCTS, BEAN_MACHINES, PHONE } from '../data'
 import Logo from './Logo'
 
 const SUB = [
   ...PRODUCTS.map((p) => [`${p.name} · ${p.tag}`, `/products/${p.slug}`]),
   ['Bean to Cup Machines', '/bean-to-cup'],
+  ...BEAN_MACHINES.map((p) => [`${p.name} · ${p.tag}`, `/bean-to-cup/${p.slug}`]),
   ['Hand Sanitizer', '/hand-sanitizer'],
 ]
 

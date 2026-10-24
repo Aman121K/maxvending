@@ -20,7 +20,7 @@ export default function Gallery() {
           <div className="gal">
             {PRODUCTS.map((p, i) => (
               <Reveal key={p.slug} i={i}>
-                <button className="gal-item" onClick={() => setSel(p)}><img src={p.img} alt={p.name} loading="lazy" /><span>{p.name} · {p.tag}</span></button>
+                <button className="gal-item" onClick={() => setSel(p)}><span className="gp"><img src={p.img} alt={p.name} loading="lazy" /></span><span className="gc">{p.name} · {p.tag}</span></button>
               </Reveal>
             ))}
           </div>
